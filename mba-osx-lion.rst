@@ -5,6 +5,8 @@ Macbook Air v3 Setup
 Create a `.bashrc` file
 ========================
 
+.. sourcecode:: bash
+
 	# Colors for the pretty
 	export CLICOLOR=1
 	export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -47,21 +49,27 @@ Macports is dangerous and ugly. Go with homebrew:
 
  * http://mxcl.github.com/homebrew/
 
-Installation is trivial::
+Installation is trivial:
+
+.. sourcecode:: bash
 
 	$ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
 
 .. warning:: Some people really don't like it and these are people who when they have problems with a tool, I listen. That said, these are the kind of people who dig into the guts of C code, write their own 0mq based HTTP servers, and play guitar. I'm sure they are doing things with their OSX that are not the normal sort of thing I do.
 
-Then I install wget because I like it::
+Then I install wget because I like it:
 
-	brew install wget
+.. sourcecode:: bash
+
+	$ brew install wget
 	
 
 Python Environment Controls
 ============================
 
-These are the steps I use to get my environment going. For now, just my system Python but later I'll be doing this on other Python versions::
+These are the steps I use to get my environment going. For now, just my system Python but later I'll be doing this on other Python versions:
+
+.. sourcecode:: bash
 
 	$ easy_install pip
 	$ pip install virtualenv
@@ -91,10 +99,10 @@ Like PIL, I've had grief with LXML in the past with all it's dependencies. Can't
 Fixing the postgresql initdb
 ==============================
 
-.. parsed-literal::
+.. sourcecode:: bash
 
-	sudo sysctl -w kern.sysv.shmall=65536
-	sudo sysctl -w kern.sysv.shmmax=16777216
-	brew install postgresql
-	initdb /usr/local/var/postgres
-	postgres -D /usr/local/var/postgres
+	$ sudo sysctl -w kern.sysv.shmall=65536
+	$ sudo sysctl -w kern.sysv.shmmax=16777216
+	$ brew install postgresql
+	$ initdb /usr/local/var/postgres
+	$ postgres -D /usr/local/var/postgres
