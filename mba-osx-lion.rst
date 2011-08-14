@@ -5,7 +5,7 @@ Macbook Air v3 Setup
 Create a `.bashrc` file
 ========================
 
-.. sourcecode:: bash
+.. parsed-literal::
 
 	# Colors for the pretty
 	export CLICOLOR=1
@@ -51,7 +51,7 @@ Macports is dangerous and ugly. Go with homebrew:
 
 Installation is trivial:
 
-.. sourcecode:: bash
+.. parsed-literal::
 
 	$ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
 
@@ -59,7 +59,7 @@ Installation is trivial:
 
 Then I install wget because I like it:
 
-.. sourcecode:: bash
+.. parsed-literal::
 
 	$ brew install wget
 	
@@ -69,7 +69,7 @@ Python Environment Controls
 
 These are the steps I use to get my environment going. For now, just my system Python but later I'll be doing this on other Python versions:
 
-.. sourcecode:: bash
+.. parsed-literal::
 
 	$ easy_install pip
 	$ pip install virtualenv
@@ -99,7 +99,7 @@ Like PIL, I've had grief with LXML in the past with all it's dependencies. Can't
 Fixing the postgresql initdb
 ==============================
 
-.. sourcecode:: bash
+.. parsed-literal::
 
 	$ sudo sysctl -w kern.sysv.shmall=65536
 	$ sudo sysctl -w kern.sysv.shmmax=16777216
