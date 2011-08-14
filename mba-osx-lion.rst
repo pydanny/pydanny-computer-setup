@@ -106,3 +106,28 @@ Fixing the postgresql initdb
 	$ brew install postgresql
 	$ initdb /usr/local/var/postgres
 	$ postgres -D /usr/local/var/postgres
+	
+My current .bashrc file
+=======================
+
+.. parsed-literal::
+
+# pygments and docutils stuff
+export PATH=/usr/local/bin:/usr/local/bin/rst2html.py:$PATH
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export TM_RST2HTML=/usr/local/bin/rst2html.py
+
+# Compilier options
+export ARCHFLAGS="-arch x86_64"
+export CC=/usr/bin/gcc-4.2
+export CCFLAGS='-arch i386 -arch x86_64 -pipe'
+export CFLAGS='-arch i386 -arch x86_64 -pipe -no-cpp-precomp'
+export CXXFLAGS='-arch i386 -arch x86_64 -pipe'
+export LDFLAGS='-arch i386 -arch x86_64 -bind_at_load'
+
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias rmpyc='find . -type f -name "*.pyc" -print0 | xargs -0 rm -v'
+
+
