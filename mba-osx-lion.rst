@@ -96,13 +96,17 @@ Like PIL, I've had grief with LXML in the past with all it's dependencies. Can't
 
 	$ pip install lxml
 
-Fixing the postgresql initdb
+Fixing the postgresql stuff
 ==============================
+
+In your ~/.bash_profile::
+
+        export PATH=/usr/local/bin:$PATH
 
 .. parsed-literal::
 
-	$ sudo sysctl -w kern.sysv.shmall=65536
-	$ sudo sysctl -w kern.sysv.shmmax=16777216
+	$ sudo sysctl -w kern.sysv.shmall=8000
+	$ sudo sysctl -w kern.sysv.shmmax=32768000
 	$ brew install postgresql
 	$ initdb /usr/local/var/postgres
 	$ postgres -D /usr/local/var/postgres
