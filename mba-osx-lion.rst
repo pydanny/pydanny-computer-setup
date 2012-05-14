@@ -38,7 +38,7 @@ I've used Textmates off and on since Spring of 2006. Unfortunately it is dated a
 
  * http://www.sublimetext.com
 
-I use Sublime bareback - which means I have no extensions.
+I use Sublime with a single extensions, specifically Sublime Linter.
 
 Yeah, I could use emacs or vi, but I've learned the hard way that just because you can use one of those tools doesn't mean you are any good at coding.
 
@@ -62,7 +62,7 @@ Then I install wget because I like it:
 .. parsed-literal::
 
 	$ brew install wget
-	
+
 
 Python Environment Controls
 ============================
@@ -79,22 +79,22 @@ In my `.bashrc` file I add::
 
 	source /usr/local/bin/virtualenvwrapper.sh
 
-Install Python Imaging Library
-==============================
+Install some very important systems
+====================================
 
-Oddly enough, PIL is not part of the standard library but ElementTree is. And PIL always causes me trouble in virtualenvs or buildouts so I install it in my system Python just in case::
+You need these::
 
 	$ brew install jpeg
-	$ pip install PIL
+	$ brew install libmemcached
 
 The first command gets the jpeg decoder into your system, the second installs PIL. 
 
 Install LXML
 ============
 
-Like PIL, I've had grief with LXML in the past with all it's dependencies. Can't we just get this into core Python? Probably not because I think some things are super dependant on things that would require cygwin on Windows. So...::
+I've had grief with LXML in the past with all it's dependencies. Can't we just get this into core Python? Probably not because I think some things are super dependant on things that would require cygwin on Windows. So...::
 
-	$ pip install lxml
+	$ sudo pip install lxml
 
 Fixing the postgresql stuff
 ==============================
